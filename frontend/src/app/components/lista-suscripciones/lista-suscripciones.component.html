@@ -1,0 +1,12 @@
+<h2>Tus suscripciones</h2>
+<div class="listaSuscripciones">
+    <div *ngFor="let susc of suscripciones" class="suscripcion {{ susc.categoria }}">
+        <h3>{{susc.nombre}}</h3>
+        <p>Fecha de alta: {{susc.fechaAlta}}</p>
+        <p>Precio: {{susc.precio}}</p>
+        <p>Periodo: {{susc.periodo}}</p>
+        <p>Estado: {{susc.estado}}</p>
+        <p>Fecha expira: {{ susc.expira }}</p>
+        <mat-progress-bar mode="buffer" [value]="calcularDias(susc.expira)"></mat-progress-bar>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.contenerdorRegistro{
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: 12fr;
+    grid-template-areas: "texto registro";
+    justify-items: center;
+}
+
+.textoExplicativo{
+    grid-area: texto;
+}
+
+.registro{
+    grid-area: registro;
+   
+}
+
+.formRegistro{
+    display: flex;
+    flex-direction: column;
+
+}
+
+

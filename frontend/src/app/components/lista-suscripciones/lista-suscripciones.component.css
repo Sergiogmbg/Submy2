@@ -1,0 +1,19 @@
+.listaSuscripciones {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.suscripcion {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    margin: 2px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+p {
+    color: rgb(75, 75, 75);
+}

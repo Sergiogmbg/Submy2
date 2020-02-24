@@ -1,0 +1,7 @@
+<div class="fichalogin">
+    <form [formGroup]="formLogin" (submit)="submit()">
+        Usuario: <input type="text" formControlName="usuario">
+        Contraseña: <input type="password" formControlName="pass">
+                    <button type="submit">Enviar</button>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+.plantillainicio {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 12fr;
+    grid-template-areas: "cabecera" "cuerpo" "pie";
+}
+
+.cabecera {
+    grid-area: cabecera;
+    text-align: center;
+    color: white;
+    background-color: purple;
+    box-shadow: 5px 5px 5px rgb(190, 190, 190);
+}
+
+.cuerpo {
+    grid-area: cuerpo;
+    display: grid;
+}
+
+.pie {
+    grid-area: pie;
+    background-color: purple;
+   
+}

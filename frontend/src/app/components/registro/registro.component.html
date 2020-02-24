@@ -1,0 +1,50 @@
+<div class="contenerdorRegistro">
+    <div class="textoExplicativo">
+        <h2>Titulo de muestra</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, excepturi! Ut est, quod debitis quidem sed recusandae veritatis! </p>
+    </div>
+   <div class="registro">
+    <form [formGroup]="formregistro" (submit)="submit()" class="formRegistro">
+        Registro <br>
+       
+         Nick: <input type="text" formControlName="nick">
+         <div *ngIf="nick.invalid && (nick.dirty || nick.touched)"> 
+            <div *ngIf="nick.errors.required">
+                el nick del usuario es obligatorio
+            </div>
+            <div *ngIf="nick.errors.pattern">
+                el nick no debe contener espacios
+            </div>
+        </div>
+         Nombre: <input type="text" formControlName="nombre">
+         <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"> 
+            
+            <div *ngIf="nombre.errors.required">
+                el nombre del usuario es obligatorio
+            </div>
+        </div>
+         Apellidos: <input type="text" formControlName="apellidos">
+         <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)"> 
+            
+            <div *ngIf="apellidos.errors.required">
+                al menos un apellido del usuario es obligatorio
+            </div>
+        </div>
+         Imagen: <input type="file" formControlName="imagen">
+         Email: <input type="text" formControlName="email">
+         <div *ngIf="email.invalid && (email.dirty || email.touched)"> 
+            
+            <div *ngIf="email.errors.required">
+                el email del usuario es obligatorio
+            </div>
+            <div *ngIf="email.errors.pattern">
+                el email no cumple con los requisitos
+            </div>
+        </div>
+         Contraseña: <input type="password" formControlName="password">
+        <!--Repite la contraseña: <input type="password" formControlName="compruebaPassword">-->            
+                     <button type="submit" [disabled]="!formregistro.valid">Enviar</button>
+     </form>
+   </div>
+    
+</div>
